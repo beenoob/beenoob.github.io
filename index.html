@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+          * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>My App</title>
+
+  <link rel="stylesheet" href="framework7/css/framework7.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover theme-dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Left Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">Left panel content goes here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right panel with reveal effect-->
+    <div class="panel panel-right panel-reveal theme-dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Right Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">Right panel content goes here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Views/Tabs container -->
+    <div class="views tabs ios-edges">
+      <!-- Tabbar for switching views-tabs -->
+      <div class="toolbar tabbar-labels toolbar-bottom-md">
+        <div class="toolbar-inner">
+          <a href="#view-home" class="tab-link tab-link-active">
+            <i class="f7-icons">home</i>
+            <span class="tabbar-label">新房</span>
+          </a>
+          <a href="#view-catalog" class="tab-link">
+            <i class="f7-icons">reload</i>
+            <span class="tabbar-label">二手</span>
+          </a>
+		 
+          <a href="#view-settings" class="tab-link">
+            <i class="f7-icons">cloud_download</i>
+            <span class="tabbar-label">特价</span>
+          </a>
+		   <a href="#view-lists" class="tab-link">
+            <i class="f7-icons">world</i>
+            <span class="tabbar-label">房事</span>
+          </a>	
+        </div>
+      </div>
+      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-home" class="view view-main tab tab-active">
+        <!-- Page, data-name contains page name which can be used in page callbacks -->
+        <div class="page" data-name="home">
+          <div class="page-content">
+		    <div class="card demo-card-header-pic">
+			  <div style="background-image:url(image/f1.jpg)" class="card-header align-items-flex-end">18988888888</div>
+			  <div class="card-content card-content-padding">
+				<p class="date">商品房</p>
+				<p class="item-subtitle3">描述：上班上学都方便！为自我为孩子选取它，绝对没有错！保利西子湾位于松江大学城的近距离辐射之内，感受上海外国语大学、上海对外贸易学院、东华大学、华东政法学院、上海工程技术大学、复旦大学上海视觉艺术学院、上海立信会计学院等七所大学高尚人文素质环境，学术氛围、人文气质、艺术气息全然渗透，成就书香门第之家。
+
+　　教育：西外外国语学校、华师大实验中学，上师大附属外国语中小等多所中学、小学、幼儿园，西外外国语学校幼儿园、新城实验幼儿园等。
+
+　　综合商场：紧邻规划中超大型“城市综合体”集松江交通枢纽中心、购物中心、休闲娱乐中心三大功能为一体的综合建筑群，这个总规模超过20万平米大型城市综合体，定位为上海西南新的城市副中心。新城购物中心与休闲娱乐中心SHOPPINGMALL，规划有大型品牌大卖场、中高档百货、青年时尚广场等丰富业态，以及大型美食广场、文化艺术中心、健身中心、电影院等丰富的文化休闲娱乐设施。</p>
+			  </div>
+			  <div class="card-footer"><a href="#" class="link">喜欢</a><a href="/product/1/">更多</a></div>
+			</div>
+			  <div class="card demo-card-header-pic">
+			  <div style="background-image:url(image/f2.jpg)" class="card-header align-items-flex-end">18988888888</div>
+			  <div class="card-content card-content-padding">
+				<p class="date">商品房</p>
+				<p class="item-subtitle3">描述：上班上学都方便！为自我为孩子选取它，绝对没有错！保利西子湾位于松江大学城的近距离辐射之内，感受上海外国语大学、上海对外贸易学院、东华大学、华东政法学院、上海工程技术大学、复旦大学上海视觉艺术学院、上海立信会计学院等七所大学高尚人文素质环境，学术氛围、人文气质、艺术气息全然渗透，成就书香门第之家。
+
+　　教育：西外外国语学校、华师大实验中学，上师大附属外国语中小等多所中学、小学、幼儿园，西外外国语学校幼儿园、新城实验幼儿园等。
+
+　　综合商场：紧邻规划中超大型“城市综合体”集松江交通枢纽中心、购物中心、休闲娱乐中心三大功能为一体的综合建筑群，这个总规模超过20万平米大型城市综合体，定位为上海西南新的城市副中心。新城购物中心与休闲娱乐中心SHOPPINGMALL，规划有大型品牌大卖场、中高档百货、青年时尚广场等丰富业态，以及大型美食广场、文化艺术中心、健身中心、电影院等丰富的文化休闲娱乐设施。</p>
+			  </div>
+			  <div class="card-footer"><a href="#" class="link">喜欢</a><a href="/product/2/">更多</a></div>
+			</div>
+			  <div class="card demo-card-header-pic">
+			  <div style="background-image:url(image/f3.jpg)" class="card-header align-items-flex-end">18988888888</div>
+			  <div class="card-content card-content-padding">
+				<p class="date">商品房</p>
+				<p class="item-subtitle3">描述：上班上学都方便！为自我为孩子选取它，绝对没有错！保利西子湾位于松江大学城的近距离辐射之内，感受上海外国语大学、上海对外贸易学院、东华大学、华东政法学院、上海工程技术大学、复旦大学上海视觉艺术学院、上海立信会计学院等七所大学高尚人文素质环境，学术氛围、人文气质、艺术气息全然渗透，成就书香门第之家。
+
+　　教育：西外外国语学校、华师大实验中学，上师大附属外国语中小等多所中学、小学、幼儿园，西外外国语学校幼儿园、新城实验幼儿园等。
+
+　　综合商场：紧邻规划中超大型“城市综合体”集松江交通枢纽中心、购物中心、休闲娱乐中心三大功能为一体的综合建筑群，这个总规模超过20万平米大型城市综合体，定位为上海西南新的城市副中心。新城购物中心与休闲娱乐中心SHOPPINGMALL，规划有大型品牌大卖场、中高档百货、青年时尚广场等丰富业态，以及大型美食广场、文化艺术中心、健身中心、电影院等丰富的文化休闲娱乐设施。</p>
+			  </div>
+			  <div class="card-footer"><a href="#" class="link">喜欢</a><a href="/product/3/">更多</a></div>
+			</div>
+			<div class="card demo-card-header-pic">
+			  <div style="background-image:url(image/f3.jpg)" class="card-header align-items-flex-end">18988888888</div>
+			  <div class="card-content card-content-padding">
+				<p class="date">商品房</p>
+				<p class="item-subtitle3">描述：上班上学都方便！为自我为孩子选取它，绝对没有错！保利西子湾位于松江大学城的近距离辐射之内，感受上海外国语大学、上海对外贸易学院、东华大学、华东政法学院、上海工程技术大学、复旦大学上海视觉艺术学院、上海立信会计学院等七所大学高尚人文素质环境，学术氛围、人文气质、艺术气息全然渗透，成就书香门第之家。
+
+　　教育：西外外国语学校、华师大实验中学，上师大附属外国语中小等多所中学、小学、幼儿园，西外外国语学校幼儿园、新城实验幼儿园等。
+
+　　综合商场：紧邻规划中超大型“城市综合体”集松江交通枢纽中心、购物中心、休闲娱乐中心三大功能为一体的综合建筑群，这个总规模超过20万平米大型城市综合体，定位为上海西南新的城市副中心。新城购物中心与休闲娱乐中心SHOPPINGMALL，规划有大型品牌大卖场、中高档百货、青年时尚广场等丰富业态，以及大型美食广场、文化艺术中心、健身中心、电影院等丰富的文化休闲娱乐设施。</p>
+			  </div>
+			  <div class="card-footer"><a href="#" class="link">喜欢</a><a href="/product/3/">更多</a></div>
+			</div>
+			<div class="card demo-card-header-pic">
+			  <div style="background-image:url(image/f3.jpg)" class="card-header align-items-flex-end">18988888888</div>
+			  <div class="card-content card-content-padding">
+				<p class="date">商品房</p>
+				<p class="item-subtitle3">描述：上班上学都方便！为自我为孩子选取它，绝对没有错！保利西子湾位于松江大学城的近距离辐射之内，感受上海外国语大学、上海对外贸易学院、东华大学、华东政法学院、上海工程技术大学、复旦大学上海视觉艺术学院、上海立信会计学院等七所大学高尚人文素质环境，学术氛围、人文气质、艺术气息全然渗透，成就书香门第之家。
+
+　　教育：西外外国语学校、华师大实验中学，上师大附属外国语中小等多所中学、小学、幼儿园，西外外国语学校幼儿园、新城实验幼儿园等。
+
+　　综合商场：紧邻规划中超大型“城市综合体”集松江交通枢纽中心、购物中心、休闲娱乐中心三大功能为一体的综合建筑群，这个总规模超过20万平米大型城市综合体，定位为上海西南新的城市副中心。新城购物中心与休闲娱乐中心SHOPPINGMALL，规划有大型品牌大卖场、中高档百货、青年时尚广场等丰富业态，以及大型美食广场、文化艺术中心、健身中心、电影院等丰富的文化休闲娱乐设施。</p>
+			  </div>
+			  <div class="card-footer"><a href="#" class="link">喜欢</a><a href="/product/3/">更多</a></div>
+			</div>
+            
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Catalog View -->
+      <div id="view-catalog" class="view tab">
+        <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
+      </div>
+
+      <!-- Settings View -->
+      <div id="view-settings" class="view tab">
+        <!-- Settings page will be loaded here dynamically from /settings/ route -->
+      </div>
+	   <div id="view-lists" class="view tab">
+        <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="my-popup">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Popup</div>
+              <div class="right">
+                <a href="#" class="link popup-close">Close</a>
+              </div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>Popup content goes here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div class="login-screen" id="my-login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Login</div>
+            <div class="list">
+              <ul>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Username</div>
+                    <div class="item-input-wrap">
+                      <input type="text" name="username" placeholder="Your username">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Password</div>
+                    <div class="item-input-wrap">
+                      <input type="password" name="password" placeholder="Your password">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="#" class="item-link list-button login-button">Sign In</a>
+                </li>
+              </ul>
+              <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cordova -->
+  <!--
+  <script src="cordova.js"></script>
+  -->
+
+  <!-- Framework7 library -->
+  <script src="framework7/js/framework7.min.js"></script>
+
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>

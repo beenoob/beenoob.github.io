@@ -1,0 +1,76 @@
+<template>
+  <div class="page" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">{{productlists.title}}</div>
+      </div>
+    </div>
+    <div class="page-content">
+	  <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="50" class="swiper-container swiper-init demo-swiper">
+	  <div class="swiper-pagination"></div>
+	  <div class="swiper-wrapper">
+		<div class="swiper-slide"><img src="image/f1.jpg" height="580" width="100%"/></div>
+		<div class="swiper-slide"><img src="image/f2.jpg" height="580" width="100%"/></div>
+		<div class="swiper-slide"><img src="image/f3.jpg" height="580" width="100%"/></div>
+		<div class="swiper-slide"><img src="image/f4.jpg" height="580" width="100%"/></div>
+		<div class="swiper-slide"><img src="image/f5.jpg" height="580" width="100%"/></div>
+		<div class="swiper-slide"><img src="image/f6.jpg" height="580" width="100%"/></div>
+		<div class="swiper-slide"><img src="image/f7.jpg" height="580" width="100%"/></div>
+		<div class="swiper-slide"><img src="image/f1.jpg" height="580" width="100%"/></div>
+	  </div>
+	</div> 
+      <div class="block-title">{{productlists.title}}</div>
+      <div class="block block-strong">
+        {{productlists.description}}
+      </div>
+	  基本信息
+	  <hr>
+	<div class="row">
+	<!-- Each "cell" has col-[widht in percents] class -->
+		<div class="col-50">价格： 待定</div>
+		<div class="col-50">楼盘地址：渝南大道轨道3号线花溪站前行500米</div>
+		<div class="col-50">物业类别：花园洋房</div>
+		<div class="col-50">项目特色：配套商品房 </div>
+		<div class="col-50">建筑类别：板塔结合 多层 高层 小高层</div>
+		<div class="col-50">装修状况：毛坯</div>
+		<div class="col-50">产权年限：50年</div>
+		<div class="col-50">开发 商：重庆蓝光和骏置业有限公司</div>
+	</div>
+	销售信息  
+	 <hr>
+	<div class="row">
+	<!-- Each "cell" has col-[widht in percents] class -->
+	    <div class="col-50">销售状态：待售</div> 
+		<div class="col-50">开盘时间：暂无资料</div>
+		<div class="col-50">楼盘优惠：洋房预计7月中旬首开</div>
+		<div class="col-50">交房时间：未知</div>
+		<div class="col-50">售楼地址：重庆龙洲湾花溪蓝光水岸公园售楼部</div>
+		<div class="col-50">咨询电话：400-890-0000 转 864295</div>
+		<div class="col-50">主力户型：三居(1) 四居(1)</div>
+		<div class="col-50">预售许可证：暂无资料</div>
+	</div>
+   </div>
+  </div>
+</template>
+<script>
+  return {
+    data: function () {
+      var productId = this.$route.params.id;
+      var currentProduct;
+      this.$root.productlists.forEach(function (productlists) {
+        if (productlists.id === productId) {
+          currentProduct = productlists;
+        }
+      });
+      return {
+        productlists: currentProduct,
+      };
+    }
+  };
+</script>
